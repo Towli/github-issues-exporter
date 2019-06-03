@@ -81,7 +81,10 @@ inquirer
           closed_at: issue.closed_at,
           body: issue.body,
           state: issue.open,
-          number: issue.number
+          number: issue.number,
+          labels: issue.labels.map(label => {
+            return label.name;
+          })
         };
       });
 
